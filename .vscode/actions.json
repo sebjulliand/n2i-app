@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Create RPGLE Program",
+    "command": "CRTBNDRPG PGM(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTCCSID(*JOB)",
+    "deployFirst": true,
+    "environment": "ile",
+    "extensions": [
+      "RPGLE"
+    ],
+    "type": "file"
+  },
+  {
+    "name": "Create RPGLE Module",
+    "command": "CRTRPGMOD MODULE(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTCCSID(*JOB)",
+    "deployFirst": true,
+    "environment": "ile",
+    "extensions": [
+      "RPGLE"
+    ],
+    "type": "file"
+  },
+  {
+    "name": "Create SQLRPGLE Program",
+    "command": "CRTSQLRPGI OBJ(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OPTION(*EVENTF) DBGVIEW(*SOURCE) CLOSQLCSR(*ENDMOD) CVTCCSID(*JOB) COMPILEOPT('TGTCCSID(*JOB)') RPGPPOPT(*LVL2)",
+    "deployFirst": true,
+    "environment": "ile",
+    "extensions": [
+      "SQLRPGLE"
+    ],
+    "type": "file"
+  },
+  {
+    "name": "Create SQLRPGLE Module",
+    "command": "CRTSQLRPGI OBJ(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OBJTYPE(*MODULE) OPTION(*EVENTF) DBGVIEW(*SOURCE) CLOSQLCSR(*ENDMOD) CVTCCSID(*JOB) COMPILEOPT('TGTCCSID(*JOB)') RPGPPOPT(*LVL2)",
+    "deployFirst": true,
+    "environment": "ile",
+    "extensions": [
+      "SQLRPGLE"
+    ],
+    "type": "file"
+  },
+  {
+    "extensions": [
+      "CLP",
+      "CLLE"
+    ],
+    "name": "Create Bound CL Program",
+    "command": "CRTBNDCL PGM(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OPTION(*EVENTF) DBGVIEW(*SOURCE)",
+    "deployFirst": true,
+    "environment": "ile",
+    "type": "file"
+  },
+  {
+    "extensions": [
+      "cmd"
+    ],
+    "name": "Create Command",
+    "command": "CRTCMD CMD(&CURLIB/&NAME) PGM(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OPTION(*EVENTF)",
+    "deployFirst": true,
+    "environment": "ile",
+    "type": "file"
+  },
+  {
+    "extensions": [
+      "SQL",
+      "TABLE",
+      "VIEW",
+      "SQLPRC",
+      "SQLUDF",
+      "SQLUDT",
+      "SQLTRG",
+      "SQLALIAS",
+      "SQLSEQ"
+    ],
+    "name": "Run SQL Statements (RUNSQLSTM)",
+    "command": "RUNSQLSTM SRCSTMF('&FULLPATH') COMMIT(*NONE) NAMING(*SQL)",
+    "deployFirst": true,
+    "environment": "ile",
+    "type": "file"
+  },
+  {
+    "extensions": [
+      "GLOBAL"
+    ],
+    "name": "Create TOOLS Service Program",
+    "command": "CRTSRVPGM SRVPGM(&CURLIB/TOOLS) EXPORT(*ALL) MODULE(&CURLIB/OVRPRTF) ACTGRP(TOOLS)",
+    "environment": "ile",
+    "type": "file",
+    "deployFirst": true,
+    "refresh": "no",
+    "runOnProtected": false
+  },
+  {
+    "name": "Create CLLE Module",
+    "command": "CRTCLMOD MODULE(&CURLIB/&NAME) SRCSTMF('&RELATIVEPATH') OPTION(*EVENTF) DBGVIEW(*LIST) TGTCCSID(*JOB)",
+    "deployFirst": true,
+    "environment": "ile",
+    "extensions": [
+      "CLLE"
+    ],
+    "type": "file",
+    "refresh": "no",
+    "runOnProtected": false
+  },
+  {
+    "name": "Create JOKESPOOL program",
+    "type": "file",
+    "environment": "ile",
+    "command": "CRTPGM PGM(&CURLIB/JOKESPOOL) MODULE(&CURLIB/JOKESPOOL) ENTMOD(&CURLIB/JOKESPOOL) BNDSRVPGM((&CURLIB/TOOLS)) ACTGRP(*CALLER)",
+    "refresh": "no",
+    "deployFirst": false,
+    "runOnProtected": false
+  }
+]

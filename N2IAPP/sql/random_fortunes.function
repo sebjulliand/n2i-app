@@ -1,0 +1,15 @@
+create or replace function RandomFortune()
+returns varchar(5000)
+language sql
+reads sql data
+not deterministic
+set option commit = *NONE,
+           dbgview = *LIST,
+           dynusrprf = *USER,
+           usrprf = *USER
+begin
+  
+  return;
+end;
+comment on function RandomFortune is 'Get a random cached fortune';
+grant execute on function RandomFortune to PUBLIC;

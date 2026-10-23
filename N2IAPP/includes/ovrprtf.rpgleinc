@@ -1,0 +1,7 @@
+**free
+dcl-pr OverPRTFile EXTPROC('OVRPRTF');
+  dcl-parm in_printer Char(10) Const;
+  dcl-parm in_name Char(10) Const;
+  dcl-parm in_user_data Char(10) Const;
+  dcl-parm in_set Ind Const;
+end-pr;
