@@ -2,7 +2,7 @@ Create Or Replace Table FORTUNES (
   ID integer as identity,
   MESSAGE varchar(5000),
   CREATED timestamp default current_timestamp
-) ON REPLACE PRESERVE ALL ROWS;
+);
 
 LABEL ON TABLE FORTUNES IS 'Good Fortunes';
 LABEL ON COLUMN FORTUNES (

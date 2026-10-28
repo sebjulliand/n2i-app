@@ -73,7 +73,7 @@
       "SQLSEQ"
     ],
     "name": "Run SQL Statements (RUNSQLSTM)",
-    "command": "RUNSQLSTM SRCSTMF('&FULLPATH') COMMIT(*NONE) NAMING(*SQL)",
+    "command": "RUNSQLSTM SRCSTMF('&FULLPATH') COMMIT(*NONE) NAMING(*SQL) DFTRDBCOL(&CURLIB)",
     "deployFirst": true,
     "environment": "ile",
     "type": "file"
