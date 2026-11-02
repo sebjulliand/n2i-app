@@ -1,6 +1,7 @@
 .*
 !.gitignore
 !.vscode
+!.deployignore
 .logs
 .evfevent
 .itest
