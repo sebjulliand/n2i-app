@@ -1,1 +1,1 @@
-SUBDIRS = N2IAPP/tables N2IAPP/sql N2IAPP/modules N2IAPP/programs N2IAPP/services
+SUBDIRS = N2IAPP
