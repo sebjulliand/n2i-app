@@ -1,6 +1,7 @@
 create or replace function RandomFortune()
 returns varchar(5000)
 language sql
+specific RANDFORTF
 reads sql data
 not deterministic
 set option commit = *NONE,
