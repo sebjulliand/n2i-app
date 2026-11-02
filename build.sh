@@ -25,7 +25,6 @@ run(){
   cl "$command $srcStmf" &>> $output && echo ✅ || {
      echo ❌
      FAILED=$(($FAILED+1))
-     echo $FAILED
   }
 
   [[ -n "$eventf" ]] && dumpEventf $eventf $ifsFile
