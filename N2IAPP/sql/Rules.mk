@@ -1,1 +1,1 @@
-RANDO00001.SRVPGM: RandomFortune.sqludf
+RANDFORTF.SRVPGM: RandomFortune.sqludf
