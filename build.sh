@@ -38,8 +38,6 @@ dumpEventf(){
   [[ -e "$target" ]] && cl "CPYTOSTMF STMFCCSID(1208) FROMMBR('$target') TOSTMF('.evfevent/$(basename $file).evfevent')" > /dev/null
 }
 
-cl "call QGPL/STRUSTEST"
-
 run "CRTCLMOD MODULE($LIBRARY/OVRPRTF) OPTION(*EVENTF) DBGVIEW($DEBUG_VIEW) TGTCCSID(*JOB)" "N2IAPP/modules/ovrprtf.clle" "OVRPRTF"
 run "CRTSRVPGM SRVPGM($LIBRARY/TOOLS) MODULE($LIBRARY/OVRPRTF) ACTGRP(TOOLS)" "TOOLS.ilesrvpgm"
 
