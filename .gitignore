@@ -1,3 +1,7 @@
 .*
 !.gitignore
 !.vscode
+.logs
+.evfevent
+.itest
+.env

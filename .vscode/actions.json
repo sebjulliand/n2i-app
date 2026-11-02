@@ -110,5 +110,21 @@
     "refresh": "no",
     "deployFirst": false,
     "runOnProtected": false
+  },
+  {
+    "name": "Build project",
+    "type": "file",
+    "extensions": [
+      "SH"
+    ],
+    "environment": "pase",
+    "command": "build.sh &CURLIB",
+    "refresh": "no",
+    "deployFirst": true,
+    "postDownload": [
+      ".evfevent",
+      ".logs"
+    ],
+    "runOnProtected": false
   }
 ]

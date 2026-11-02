@@ -1,0 +1,4 @@
+{
+  "buildCommand": "build.sh &CURLIB",
+  "description": "Sample project for N2i"
+}
