@@ -1,4 +1,6 @@
 {
-  "buildCommand": "build.sh &CURLIB",
-  "description": "Sample project for N2i"
+  "buildCommand": "makei build",
+  "compileCommand": "makei compile -f {path}",
+  "description": "Sample project for N2i",
+  "curlib": "&OBJECT_LIBRARY"
 }
